@@ -3,17 +3,20 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="dispatch-background-gps-permission-message"
-    version="0.1">
+    version="0.2">
 
   <name>dispatch-background-gps-permission-message</name>
 
   <description>
-    Set the default ios background location permission request message.
+    Set the default iOS background location and accelerometer permission request messages.
   </description>
 
   <platform name="ios">
     <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
         <string>This app needs GPS enabled to work correctly.</string>
+    </config-file>
+    <config-file target="*-Info.plist" parent="NSMotionUsageDescription">
+        <string>This app uses the accelerometer to help with accurate location tracking.</string>
     </config-file>
   </platform>
 
