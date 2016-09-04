@@ -2,13 +2,13 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="dispatch-background-gps-permission-message"
+    id="dispatch-permission-messages"
     version="0.2">
 
-  <name>dispatch-background-gps-permission-message</name>
+  <name>dispatch-permission-messages</name>
 
   <description>
-    Set the default iOS background location and accelerometer permission request messages.
+    Sets permission request messages for the Dispatch mobile app in the Cordova config.xml file.
   </description>
 
   <platform name="ios">
@@ -17,6 +17,12 @@
     </config-file>
     <config-file target="*-Info.plist" parent="NSMotionUsageDescription">
         <string>This app uses the accelerometer to help with accurate location tracking.</string>
+    </config-file>
+    <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+        <string>This app needs to access your camera to take job and user profile photos.</string>
+    </config-file>
+    <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+        <string>This app needs to access your photo library to upload job and user profile photos.</string>
     </config-file>
   </platform>
 

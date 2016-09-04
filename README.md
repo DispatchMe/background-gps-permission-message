@@ -1,3 +1,3 @@
-# dispatch-background-gps-permission-message
+# dispatch-permission-messages
 
-A Cordova plugin that sets the GPS permission message. Used by the Dispatch mobile app.
+A Cordova plugin that sets permission request messages for the Dispatch mobile app in the Cordova config.xml file.
